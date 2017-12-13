@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import "./Attributes.css";
 
@@ -62,6 +63,12 @@ class Attributes extends Component {
     );
   }
 }
+
+Attributes.propTypes = {
+  attributes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  category: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  createAttr: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   attributes: state.attributes,

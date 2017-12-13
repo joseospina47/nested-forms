@@ -1,69 +1,69 @@
 export const categories = [
   {
     id: 1,
-    title: "Category 1",
+    title: "Category 1"
   },
   {
     id: 2,
-    title: "Category 2",
+    title: "Category 2"
   },
   {
     id: 3,
-    title: "Category 3",
+    title: "Category 3"
   },
   {
     id: 4,
-    title: "Category 4",
+    title: "Category 4"
   },
   {
     id: 5,
-    title: "Category 5",
-  },
+    title: "Category 5"
+  }
 ];
 
 export const resourceOpts = [
   {
     value: "Default Value",
-    title: "Default Value",
-  },
+    title: "Default Value"
+  }
 ];
 
 export const dataTypeOpts = [
   {
     value: "String",
-    title: "String",
+    title: "String"
   },
   {
     value: "Object",
-    title: "Object",
-  },
+    title: "Object"
+  }
 ];
 
 export const formatOpts = [
   {
     value: "None",
-    title: "None",
+    title: "None"
   },
   {
     value: "Number",
-    title: "Number",
+    title: "Number"
   },
   {
     value: "Boolean",
-    title: "Boolean",
+    title: "Boolean"
   },
   {
     value: "DateTime",
-    title: "DateTime",
+    title: "DateTime"
   },
   {
     value: "CDATA",
-    title: "CDATA",
+    title: "CDATA"
   },
   {
     value: "URI",
-    title: "URI",
-  },
+    title: "URI"
+  }
 ];
 
 export const attrDefaultValues = {
@@ -78,34 +78,33 @@ export const attrDefaultValues = {
   maxRange: null,
   unitOfMeasurement: null,
   precision: null,
-  accuracy: null,
+  accuracy: null
 };
 
 export const REQUIRED_ERROR = "Required";
 export const MIN_RANGE_ERROR = "Must be less than max";
 export const MAX_RANGE_ERROR = "Must be greater than min";
 export const BETWEEN_RANGE_ERROR = "Invalid value";
-export const UNIQUE_NAME = "Name must be unique";
 
 export const VALIDATION_TEMPLATE = {
   name: {
     error: false,
-    message: "",
+    message: ""
   },
   minRange: {
     error: false,
-    message: "",
+    message: ""
   },
   maxRange: {
     error: false,
-    message: "",
+    message: ""
   },
   precision: {
     error: false,
-    message: "",
+    message: ""
   },
   accuracy: {
     error: false,
-    message: "",
-  },
+    message: ""
+  }
 };

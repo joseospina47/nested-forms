@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Row, Col } from "react-bootstrap";
 import { Collapse } from "react-collapse";
 import { reduxForm } from "redux-form";
@@ -143,7 +144,11 @@ class Form extends Component {
         <Collapse isOpened={isOpened} className="form__row-collapse">
           <form
             onChange={() =>
-              setTimeout(handleSubmit(this.submitHandler.bind(this)))
+              setTimeout(
+                handleSubmit(
+                  this.submitHandler.bind(this), // eslint-disable-line react/jsx-no-bind
+                ),
+              )
             }
           >
             <Row>
@@ -246,6 +251,15 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  deleteAttr: PropTypes.func.isRequired,
+  updateAttr: PropTypes.func.isRequired,
+  attribute: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  initialize: PropTypes.func.isRequired,
+  change: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state, { attribute: { id } }) => ({
   form: id.toString(),

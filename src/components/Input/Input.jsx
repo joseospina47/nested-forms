@@ -31,6 +31,8 @@ const Input = props => (
 
 Input.defaultProps = {
   disabled: false,
+  error: false,
+  message: "",
 };
 
 Input.propTypes = {
@@ -39,6 +41,9 @@ Input.propTypes = {
   size: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+  error: PropTypes.bool,
+  message: PropTypes.string,
 };
 
 export default Input;

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row } from "react-bootstrap";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import "./Enumerations.css";
@@ -79,7 +80,7 @@ class Enumerations extends Component {
         <Col md={5}>
           <ul className="enumeration__list">
             {enumerations.map((enumItem, index) => (
-              <li>
+              <li key={enumItem}>
                 <i
                   onClick={() => this.handleDelete(index)}
                   className="enumeration__icon fa fa-trash"
@@ -94,6 +95,11 @@ class Enumerations extends Component {
     );
   }
 }
+
+Enumerations.propTypes = {
+  attribute: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  updateAttr: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   attributes: state.attributes,

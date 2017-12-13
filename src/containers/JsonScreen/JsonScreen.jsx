@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Col } from "react-bootstrap";
 
@@ -9,6 +10,10 @@ const JsonScreen = ({ attributes }) => (
     <pre className="json-screen">{JSON.stringify(attributes, null, 2)}</pre>
   </Col>
 );
+
+JsonScreen.propTypes = {
+  attributes: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 const mapStateToProps = state => ({
   attributes: state.attributes,

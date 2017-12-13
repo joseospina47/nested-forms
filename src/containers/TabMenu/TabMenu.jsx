@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import { Col } from "react-bootstrap";
@@ -69,6 +70,15 @@ class TabMenu extends Component {
     );
   }
 }
+
+TabMenu.defaultProps = {
+  attribute: {},
+};
+
+TabMenu.propTypes = {
+  selectCategory: PropTypes.func.isRequired,
+  attribute: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+};
 
 const mapStateToProps = state => ({
   category: state.category,

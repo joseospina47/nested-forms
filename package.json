@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "font-awesome": "^4.7.0",
     "prettier": "^1.9.2",
     "prop-types": "^15.6.0",
