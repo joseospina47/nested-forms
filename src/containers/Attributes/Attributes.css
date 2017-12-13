@@ -1,0 +1,31 @@
+.attr__footer {
+  background-color: rgba(161, 210, 82, 0.2);
+  color: #a1d252;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 15px 15px;
+}
+
+.attr__icon {
+  cursor: pointer;
+}
+.attr__icon-text {
+  color: #a1d252;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin-left: 5px;
+}
+
+.attr__footer i.fa {
+  font-size: 15px;
+}
+
+.attr__empty-message {
+  color: #a3a3a3;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 267px;
+  line-height: 267px;
+}

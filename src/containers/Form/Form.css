@@ -1,0 +1,50 @@
+.form__field-row {
+  border-bottom: 1px solid #bbb;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  position: relative;
+}
+
+.form__icon {
+  color: #e2e2e2;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+}
+
+.form__icon--left {
+  left: 6px;
+  margin-bottom: 10px;
+}
+
+.form__icon--right {
+  right: 6px;
+}
+
+.form__title {
+  margin-left: 12px;
+  min-height: 6px;
+  font-size: 14px;
+}
+
+.form__row-collapse {
+  padding: 0 13px 0 13px;
+  width: 100%;
+}
+
+.form__opts--show {
+  display: block;
+}
+
+.form__opts--hide {
+  display: none;
+}
+
+.form__field-error-text {
+  color: rgba(255, 0, 0, 0.6) !important;
+  margin-left: 5px;
+}

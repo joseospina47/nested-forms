@@ -1,0 +1,63 @@
+.app__wrapper {
+  padding-top: 1.5%;
+}
+
+.app__button {
+  background-color: #abd275;
+  border: 0;
+  color: #fff;
+  font-size: 11px;
+  padding: 0 15px;
+}
+
+.app__field-group {
+  margin-bottom: 5px;
+}
+
+.app__field-group label {
+  color: #a3a3a3;
+  display: inline-block;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.app__field-group label {
+  color: #a3a3a3;
+  display: inline-block;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.app__field-group--error input {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-bottom-color: rgba(255, 0, 0, 0.2);
+  border-top-color: rgba(255, 0, 0, 0.12);
+}
+
+.app__field-group select option {
+  padding: 6px 0;
+}
+
+.app__field-control {
+  background-color: #f5f5f5;
+  border: 0;
+  border-bottom: 1px solid rgba(187, 187, 187, 0.5);
+  border-top: 1px solid #f0f0f0;
+  color: #2c2c2c;
+  display: block;
+  font-size: 12px;
+  padding: 6px 8px;
+  width: 100%;
+}
+
+.app__field-control:disabled {
+  background-color: rgba(187, 187, 187, 0.6);
+  color: #2c2c2c;
+  cursor: not-allowed;
+}
+
+@media (max-width: 575px) {
+  .app__wrapper {
+    padding: 5%;
+  }
+}

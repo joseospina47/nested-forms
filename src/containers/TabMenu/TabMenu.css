@@ -1,0 +1,134 @@
+.tab-menu {
+  border: 2px solid #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-menu__tab {
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 54px;
+  list-style: none;
+  margin: 0 3px;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab-menu__tab::before {
+  -moz-transform: skew(20deg);
+  -ms-transform: skew(20deg);
+  -webkit-transform: skew(20deg);
+  transform: skew(20deg);
+  background: #d3eab6;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.tab-menu__tab:first-child {
+  margin-left: 0;
+}
+
+.tab-menu__tab:first-child p {
+  margin-left: 12px;
+  z-index: 5;
+}
+
+.tab-menu__tab:first-child::after {
+  background-color: #fff;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 22px;
+}
+
+.tab-menu__tab:last-child {
+  margin-right: 0;
+}
+
+.tab-menu__tab:last-child p {
+  margin-right: 12px;
+  z-index: 5;
+}
+
+.tab-menu__tab:last-child::after {
+  background-color: #fff;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 22px;
+}
+
+.tab-menu__tab p {
+  color: #2c2c2c;
+  font-size: 11px;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.tab-menu__tab p span {
+  position: relative;
+}
+
+.tab-menu__tab--selected {
+  height: 59px;
+  margin-bottom: -4px;
+}
+
+.tab-menu__tab--selected::before {
+  background-color: #fff;
+  border: 2px solid #a6bd89;
+  border-bottom: 0;
+}
+
+.tab-menu__tab--selected:first-child::after {
+  border-right: 2px solid #a6bd89;
+}
+
+.tab-menu__tab--selected:last-child::after {
+  border-left: 2px solid #a6bd89;
+}
+
+.tab-menu__content {
+  border: 2px solid #a6bd89;
+  margin: 0 12px;
+}
+
+.tab-menu__button {
+  background-color: #abd275;
+  border: 0;
+  color: #fff;
+  font-size: 11px;
+  padding: 0 15px;
+}
+
+.tab-menu__actions {
+  margin-top: 20px;
+  padding-right: 12px;
+}
+.tab-menu__actions .tab-menu__button {
+  font-size: 13px;
+  margin-left: 3px;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+
+.tab-menu__actions .tab-menu__button:disabled {
+  background-color: #cccccc;
+  color: #555555;
+}
+
+.tab-menu__actions .tab-menu__button.btn-cancel {
+  background-color: #555555;
+}
