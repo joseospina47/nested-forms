@@ -3,7 +3,7 @@ import {
   MIN_RANGE_ERROR,
   MAX_RANGE_ERROR,
   BETWEEN_RANGE_ERROR,
-  VALIDATION_TEMPLATE
+  VALIDATION_TEMPLATE,
 } from "../constants/config";
 
 const detectInvalid = validation => {
@@ -28,13 +28,13 @@ export const validateForm = ({
   maxRange,
   precision,
   accuracy,
-  format
+  format,
 }) => {
   const validation = { ...VALIDATION_TEMPLATE };
   if (!name) {
     validation.name = {
       error: true,
-      message: REQUIRED_ERROR
+      message: REQUIRED_ERROR,
     };
   }
 
@@ -46,59 +46,61 @@ export const validateForm = ({
   if (!minRange) {
     validation.minRange = {
       error: true,
-      message: REQUIRED_ERROR
+      message: REQUIRED_ERROR,
     };
   }
 
   if (Number(minRange) > Number(maxRange)) {
     validation.minRange = {
       error: true,
-      message: MIN_RANGE_ERROR
+      message: MIN_RANGE_ERROR,
     };
   }
   if (!maxRange) {
     validation.maxRange = {
       error: true,
-      message: REQUIRED_ERROR
+      message: REQUIRED_ERROR,
     };
   }
 
   if (Number(maxRange) < Number(minRange)) {
     validation.maxRange = {
       error: true,
-      message: MAX_RANGE_ERROR
+      message: MAX_RANGE_ERROR,
     };
   }
   if (!precision) {
     validation.precision = {
       error: true,
-      message: REQUIRED_ERROR
+      message: REQUIRED_ERROR,
     };
   }
   if (
-    Number(precision) < minRange ||
-    Number(precision) > maxRange ||
-    !calculateStepFactor(precision, minRange, maxRange)
+    precision &&
+    (Number(precision) < minRange ||
+      Number(precision) > maxRange ||
+      !calculateStepFactor(precision, minRange, maxRange))
   ) {
     validation.precision = {
       error: true,
-      message: BETWEEN_RANGE_ERROR
+      message: BETWEEN_RANGE_ERROR,
     };
   }
   if (!accuracy) {
     validation.accuracy = {
       error: true,
-      message: REQUIRED_ERROR
+      message: REQUIRED_ERROR,
     };
   }
   if (
-    Number(accuracy) < minRange ||
-    Number(accuracy) > maxRange ||
-    !calculateStepFactor(accuracy, minRange, maxRange)
+    accuracy &&
+    (Number(accuracy) < minRange ||
+      Number(accuracy) > maxRange ||
+      !calculateStepFactor(accuracy, minRange, maxRange))
   ) {
     validation.accuracy = {
       error: true,
-      message: BETWEEN_RANGE_ERROR
+      message: BETWEEN_RANGE_ERROR,
     };
   }
   validation.invalid = detectInvalid(validation);
